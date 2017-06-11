@@ -1,0 +1,13 @@
+#!/bin/sh
+
+a=$1
+b=$2
+while [ $a -ne $b ]
+do
+if [ $a -gt $b ]
+then
+c=$a; a=$b; b=$c
+fi
+b=`expr $b - $a`
+done
+echo $a
