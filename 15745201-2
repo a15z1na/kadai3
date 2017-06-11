@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ $# -ne 2 ]; then 
+ echo "15745201 requires 2 string inputs" 1>&2 
+ exit 1 
+fi 
+
+a=$1
+b=$2
+while [ $a -ne $b ]
+do
+if [ $a -gt $b ]
+then
+c=$a; a=$b; b=$c
+fi
+b=`expr $b - $a`
+done
+echo $a
