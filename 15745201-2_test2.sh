@@ -8,13 +8,13 @@ ERROR_EXIT () {
      exit 1
 }
 
-#########
-# TEST2 #
-#########
+##########
+# TEST02 #
+##########
 
 echo "15745201-2 requires 2 string inputs" > $tmp-ans
-./15745201-2 2 > $tmp-out || ERROR_EXIT "TEST2-1"
-diff $tmp-ans $tmp-out || ERROR_EXIT "TEST2-2"
+./15745201-2 2 > $tmp-out || ERROR_EXIT "TEST02-1"
+diff $tmp-ans $tmp-out || ERROR_EXIT "TEST02-2"
 
 echo OK
 rm -f $tmp-*
